@@ -3,7 +3,10 @@ Content-based movie recommendation system using Python and Streamlit.
 
 ## Pickle File
 The movie embeddings pickle file is too large for GitHub.  
-Download it here: https://drive.google.com/file/d/1dvJumXqDSdZOLcoiv4T1xL2bRbB4aTjX/view?usp=sharing  
+Download it here: 
+1. ) https://drive.google.com/file/d/1dvJumXqDSdZOLcoiv4T1xL2bRbB4aTjX/view?usp=sharing  (old)
+2. ) https://drive.google.com/file/d/1awuMl-OO490x634I9FfQ-HSS9xY0HOu4/view?usp=sharing (new)
+
 Place it in the project folder before running the app.
  
 • Designed and implemented a content-based movie recommendation system by analyzing movie metadata including genres, 
