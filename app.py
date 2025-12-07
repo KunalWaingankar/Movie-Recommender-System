@@ -25,7 +25,7 @@ def recommend(movie):
     return recommended_movies, recommended_movies_posters
 
 if not os.path.exists("similarity_perfect.pkl"):
-    gdown.download("https://drive.google.com/file/d/1awuMl-OO490x634I9FfQ-HSS9xY0HOu4/view", "similarity_perfect.pkl", quiet=False) 
+    gdown.download("https://drive.google.com/file/d/1awuMl-OO490x634I9FfQ-HSS9xY0HOu4", "similarity_perfect.pkl", quiet=False) 
 
 movies_dict = pickle.load(open('movies_perfect.pkl', 'rb'))
 similarity = pickle.load(open('similarity_perfect.pkl', 'rb'))
@@ -63,6 +63,7 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
 
