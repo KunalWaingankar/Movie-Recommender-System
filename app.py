@@ -24,10 +24,9 @@ def recommend(movie):
         recommended_movies_posters.append(fetch_poster(movie_id))
     return recommended_movies, recommended_movies_posters
 
-HF_URL = "https://huggingface.co/datasets/kunalwaingankar/movie-recommender-system-files/resolve/main/similarity_perfect.pkl"
-if not os.path.exists("similarity_perfect.pkl"):
-    with open("similarity_perfect.pkl", "wb") as f:
-        f.write(requests.get(HF_URL).content) 
+url = "https://huggingface.co/datasets/kunalwaingankar/movie-recommender-system-files/resolve/main/similarity_perfect.pkl"
+response = requests.get(url)
+similarity = pickle.loads(response.content)
 
 movies_dict = pickle.load(open('movies_perfect.pkl', 'rb'))
 similarity = pickle.load(open('similarity_perfect.pkl', 'rb'))
@@ -65,6 +64,7 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
 
