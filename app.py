@@ -5,7 +5,7 @@ import requests
 import gdown
 import os
 
-st.set_page_config(page_title="AI Data Query Assistant")
+st.set_page_config(page_title="Movie Recommender System")
 
 def fetch_poster(movie_id):
     response = requests.get('https://api.themoviedb.org/3/movie/{}?api_key=7f1a4a4a4a2b00315cfd1053cfa1d14f&language=en-US'.format(movie_id))
@@ -66,6 +66,7 @@ if st.button("Recommend"):
     with col5:
         st.text(names[4])
         st.image(posters[4])
+
 
 
 
